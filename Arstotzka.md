@@ -76,8 +76,8 @@ tags: [ai-project, agents, capstone, roadmap]
 
 ## Week 4 (Oct 12–18) — Judge / Evaluator Agent ⚠️ Critical Week
 
-- [ ] Define programmatic success criteria (unauthorized tool call, canary secret leak, goal deviation)
-- [ ] Build LLM-judge fallback for cases state-checking can't cover (judge re-derives answer independently, not just rates transcript)
+- [x] Define programmatic success criteria (unauthorized tool call, canary secret leak, goal deviation)
+- [x] Build LLM-judge fallback for cases state-checking can't cover (judge re-derives answer independently, not just rates transcript)
 - [ ] Hand-label 30–40 runs yourself
 - [ ] Compute judge agreement vs. your labels (Cohen's kappa or raw agreement %)
 - [ ] Fix judge issues found — **do not defer this**
