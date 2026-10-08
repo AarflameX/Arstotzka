@@ -16,6 +16,14 @@ class ResearchEnvironment:
         """Add a canned document."""
         self.documents.append(doc)
 
+    def inject_payload(self, doc_title: str, payload: str):
+        """Inject a malicious payload into an existing document content."""
+        for doc in self.documents:
+            if doc.get("title") == doc_title:
+                doc["content"] += f"\n\n[INJECTION START]\n{payload}\n[INJECTION END]"
+                return {"status": "success", "message": f"Injected payload into {doc_title}"}
+        return {"status": "error", "message": "Document not found"}
+
     def web_search(self, query: str) -> List[Dict]:
         """Mock web search returning snippet with injection capability."""
         results = []

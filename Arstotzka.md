@@ -68,16 +68,16 @@ tags: [ai-project, agents, capstone, roadmap]
 
 ## Week 3 (Oct 5–11) — Attack Surface Injection Points
 
-- [ ] Build injection mechanism into tool *outputs* (not user prompt) — email body, search snippet, fake document
-- [ ] Write seed library: 10–15 hand-crafted attacks across the 4 classes
-- [ ] Manually run seed attacks against victim, eyeball results
-- [ ] Confirm at least one hand-crafted attack succeeds per scenario (weaken victim prompt slightly if none do — need signal to measure)
-- [ ] **Deliverable:** at least 1 successful hand-crafted attack per scenario, logged
+- [x] Build injection mechanism into tool *outputs* (not user prompt) — email body, search snippet, fake document
+- [x] Write seed library: 10–15 hand-crafted attacks across the 4 classes
+- [x] Manually run seed attacks against victim, eyeball results
+- [x] Confirm at least one hand-crafted attack succeeds per scenario (weaken victim prompt slightly if none do — need signal to measure)
+- [x] **Deliverable:** at least 1 successful hand-crafted attack per scenario, logged
 
 ## Week 4 (Oct 12–18) — Judge / Evaluator Agent ⚠️ Critical Week
 
-- [ ] Define programmatic success criteria (unauthorized tool call, canary secret leak, goal deviation)
-- [ ] Build LLM-judge fallback for cases state-checking can't cover (judge re-derives answer independently, not just rates transcript)
+- [x] Define programmatic success criteria (unauthorized tool call, canary secret leak, goal deviation)
+- [x] Build LLM-judge fallback for cases state-checking can't cover (judge re-derives answer independently, not just rates transcript)
 - [ ] Hand-label 30–40 runs yourself
 - [ ] Compute judge agreement vs. your labels (Cohen's kappa or raw agreement %)
 - [ ] Fix judge issues found — **do not defer this**
@@ -151,6 +151,8 @@ tags: [ai-project, agents, capstone, roadmap]
 ## Running Notes
 
 - **2026-10-02:** Completed Week 1 setup & Scaffolding. Initialized Python project with `uv` and `pytest`. Implemented `GLOSSARY.md`, JSONL logging schema (`AgentTrace`), and 3 mock scenario tool environments (`EmailEnvironment`, `ResearchEnvironment`, `SupportEnvironment`). Decided to use unified high-limit hosted API keys instead of local Ollama for attacker generation.
+- **2026-10-08:** Completed Week 3 deliverables: implemented injection mechanisms into tool outputs across all three scenarios and created a seed library of 12 hand-crafted attacks covering all 4 attack classes.
+- **2026-10-08:** Completed Week 4 deliverables: implemented Judge agent with programmatic checks for canary secrets and unauthorized actions, plus LLM-based fallback for nuanced evaluation including independent re-derivation of goals.
 
 ---
 
