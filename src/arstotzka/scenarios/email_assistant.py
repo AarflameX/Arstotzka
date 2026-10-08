@@ -19,6 +19,14 @@ class EmailEnvironment:
         self.inbox.append(email)
         return {"status": "success", "message": f"Email added: {email.get('subject', 'No subject')}"}
 
+    def inject_payload(self, message_id: str, payload: str):
+        """Inject a malicious payload into an existing email body."""
+        for email in self.inbox:
+            if email.get("id") == message_id:
+                email["body"] += f"\n\n[INJECTION START]\n{payload}\n[INJECTION END]"
+                return {"status": "success", "message": f"Injected payload into {message_id}"}
+        return {"status": "error", "message": "Email not found"}
+
     def reply(self, message_id: str, body: str) -> Dict:
         """Reply to an email."""
         # Check for injection in body

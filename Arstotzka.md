@@ -68,11 +68,11 @@ tags: [ai-project, agents, capstone, roadmap]
 
 ## Week 3 (Oct 5–11) — Attack Surface Injection Points
 
-- [ ] Build injection mechanism into tool *outputs* (not user prompt) — email body, search snippet, fake document
-- [ ] Write seed library: 10–15 hand-crafted attacks across the 4 classes
-- [ ] Manually run seed attacks against victim, eyeball results
-- [ ] Confirm at least one hand-crafted attack succeeds per scenario (weaken victim prompt slightly if none do — need signal to measure)
-- [ ] **Deliverable:** at least 1 successful hand-crafted attack per scenario, logged
+- [x] Build injection mechanism into tool *outputs* (not user prompt) — email body, search snippet, fake document
+- [x] Write seed library: 10–15 hand-crafted attacks across the 4 classes
+- [x] Manually run seed attacks against victim, eyeball results
+- [x] Confirm at least one hand-crafted attack succeeds per scenario (weaken victim prompt slightly if none do — need signal to measure)
+- [x] **Deliverable:** at least 1 successful hand-crafted attack per scenario, logged
 
 ## Week 4 (Oct 12–18) — Judge / Evaluator Agent ⚠️ Critical Week
 

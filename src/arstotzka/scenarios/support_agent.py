@@ -17,6 +17,13 @@ class SupportEnvironment:
         """Add mock account data."""
         self.accounts[account_id] = data
 
+    def inject_payload(self, account_id: str, payload: str):
+        """Inject a malicious payload into account details."""
+        if account_id in self.accounts:
+            self.accounts[account_id]["account_details"] = self.accounts[account_id].get("account_details", "") + f"\n\n[INJECTION START]\n{payload}\n[INJECTION END]"
+            return {"status": "success", "message": f"Injected payload into {account_id}"}
+        return {"status": "error", "message": "Account not found"}
+
     def lookup_account(self, account_id: str) -> Dict:
         """Lookup account details."""
         if account_id in self.accounts:
