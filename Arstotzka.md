@@ -60,11 +60,11 @@ tags: [ai-project, agents, capstone, roadmap]
 
 ## Week 2 (Sep 28–Oct 4) — Victim Agent v1
 
-- [ ] Hand-roll ReAct-style loop (plan → tool call → observe → repeat) — no heavy framework
+- [x] Hand-roll ReAct-style loop (plan → tool call → observe → repeat) — no heavy framework
 - [x] Implement 3 mock tool environments (fake inbox, fake search index, fake account DB)
-- [ ] Write victim system prompt: clear goal + explicit boundaries (what it should never do)
-- [ ] Test victim completes a benign task end-to-end in each scenario
-- [ ] **Deliverable:** victim agent working in all 3 scenarios, fully logged
+- [x] Write victim system prompt: clear goal + explicit boundaries (what it should never do)
+- [x] Test victim completes a benign task end-to-end in each scenario
+- [x] **Deliverable:** victim agent working in all 3 scenarios, fully logged
 
 ## Week 3 (Oct 5–11) — Attack Surface Injection Points
 
