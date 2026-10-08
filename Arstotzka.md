@@ -151,6 +151,8 @@ tags: [ai-project, agents, capstone, roadmap]
 ## Running Notes
 
 - **2026-10-02:** Completed Week 1 setup & Scaffolding. Initialized Python project with `uv` and `pytest`. Implemented `GLOSSARY.md`, JSONL logging schema (`AgentTrace`), and 3 mock scenario tool environments (`EmailEnvironment`, `ResearchEnvironment`, `SupportEnvironment`). Decided to use unified high-limit hosted API keys instead of local Ollama for attacker generation.
+- **2026-10-08:** Completed Week 3 deliverables: implemented injection mechanisms into tool outputs across all three scenarios and created a seed library of 12 hand-crafted attacks covering all 4 attack classes.
+- **2026-10-08:** Completed Week 4 deliverables: implemented Judge agent with programmatic checks for canary secrets and unauthorized actions, plus LLM-based fallback for nuanced evaluation including independent re-derivation of goals.
 
 ---
 
